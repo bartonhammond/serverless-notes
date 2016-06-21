@@ -1,6 +1,6 @@
 {
   "name": "create",
-  "runtime": "nodejs4.3",
+  "runtime": "nodejs",
   "description": "Serverless Lambda function for project: notes",
   "customName": false,
   "customRole": false,
@@ -30,11 +30,9 @@
         "default": {
           "statusCode": "200",
           "responseParameters": {},
-          "responseModels": {
-            "application/json;charset=UTF-8": "Empty"
-          },
+          "responseModels": {},
           "responseTemplates": {
-            "application/json;charset=UTF-8": ""
+            "application/json": ""
           }
         }
       }
@@ -42,7 +40,7 @@
   ],
   "events": [],
   "environment": {
-    "SERVERLESS_PROJECT": "${project}",
+    "SERVERLESS_PROJECT": "notes",
     "SERVERLESS_STAGE": "${stage}",
     "SERVERLESS_REGION": "${region}"
   },
